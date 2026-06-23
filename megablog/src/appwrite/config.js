@@ -1,8 +1,8 @@
 import conf from "../conf/conf";
 import { Client, ID, Databases, Storage, Query } from "appwrite";
 
-console.log("DB:", conf.appwriteDatabaseId)
-console.log("COLLECTION:", conf.appwriteCollectionId)
+console.log("conf =", conf)
+console.log("project =", conf.appwriteProjectId)
 
 export class Service{
     Client= new Client();
