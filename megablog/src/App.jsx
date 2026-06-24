@@ -20,7 +20,7 @@ useEffect (() => {
   })                                               
   .finally( () => setLoading(false))
   }
- , [] )
+ ,  [] )
 
   return !loading ? (
     <div>
