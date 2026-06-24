@@ -26,7 +26,7 @@ useEffect (() => {
     <div>
       <Header />
       <main>
-       TODO <Outlet />
+      <Outlet />
       </main>
       <Footer />
     </div>

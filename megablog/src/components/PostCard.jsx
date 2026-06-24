@@ -1,23 +1,25 @@
-// import service from '../appwrite/config'
 import appwriteService from '../appwrite/config'
 import { Link } from 'react-router-dom'
 
-function PostCard({$id , title , featuredImage}) {
-  
-
+function PostCard({ $id, title, featuredImage }) {
   return (
-   
-    <Link to={`/post/${$id}`} >
-        <div className="w-full bg-gray-100 rounded-xlvp-4">
-            <div className="w-full justify-center mb-4">
-                <img src={appwriteService.filePreview(featuredImage)}
-                 alt={title} className='rounded-xl' />
-            </div>
-            <h2 className='text-xl font-bold'> {title} </h2>
+    <Link to={`/post/${$id}`} className="group block">
+      <div className="w-full overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm
+        transition duration-200 hover:shadow-lg">
+        <div className="aspect-video w-full overflow-hidden bg-gray-100">
+          <img
+            src={appwriteService.filePreview(featuredImage)}
+            alt={title}
+            className="h-full w-full object-cover transition duration-200 group-hover:scale-105"
+          />
         </div>
-    
+        <div className="p-4">
+          <h2 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600">
+            {title}
+          </h2>
+        </div>
+      </div>
     </Link>
-
   )
 }
 
